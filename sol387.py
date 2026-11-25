@@ -1,24 +1,13 @@
+from collections import Counter
+
 class Solution(object):
-    def removeDuplicates(self, nums):
+    def firstUniqChar(self, s):
 
-        if not nums:
+        frequency = Counter(s)
 
-            return 0
+        for i, char in enumerate(s):
 
-        k = 1
+            if frequency[char] == 1:
+                return i
 
-        for i in range(1,len(nums)):
-
-            if nums[i] != nums[i-1]:
-                nums[k] = nums[i]
-
-                k += 1
-
-
-        return k
-
-
-
-
-
-            
+        return -1
