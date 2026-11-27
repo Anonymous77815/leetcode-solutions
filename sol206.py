@@ -20,4 +20,4 @@ class Solution(object):
             curr = temp
 
             
-        return head
+        return prev
